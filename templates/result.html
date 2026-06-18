@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Resume Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>AI Resume Result</h1>
+    </div>
+
+    <div class="card center">
+
+        <h2>Match Score</h2>
+        <h1>{{ score }}/100</h1>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Matching Skills</h2>
+        {% for i in matching %}
+        <span class="chip green">{{ i }}</span>
+        {% endfor %}
+
+    </div>
+
+    <div class="card">
+
+        <h2>Missing Skills</h2>
+        {% for i in missing %}
+        <span class="chip red">{{ i }}</span>
+        {% endfor %}
+
+    </div>
+
+    <div class="card">
+
+        <h2>Strengths</h2>
+        {% for i in strengths %}
+        <p>✔ {{ i }}</p>
+        {% endfor %}
+
+    </div>
+
+    <div class="card">
+
+        <h2>Weaknesses</h2>
+        {% for i in weaknesses %}
+        <p>⚠ {{ i }}</p>
+        {% endfor %}
+
+    </div>
+
+    <div class="card">
+
+        <h2>Suggestions</h2>
+        {% for i in suggestions %}
+        <p>💡 {{ i }}</p>
+        {% endfor %}
+
+    </div>
+
+    <div class="card">
+
+        <h2>AI Analysis</h2>
+        <p style="white-space: pre-line;">{{ analysis_text }}</p>
+
+    </div>
+
+    <div class="center">
+        <a href="/" class="btn">Analyze Another</a>
+    </div>
+
+</div>
+
+</body>
+</html>

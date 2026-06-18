@@ -1,0 +1,55 @@
+body {
+    font-family: Arial;
+    background: #eef4ff;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+    background: #2563eb;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.chip {
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.green {
+    background: #22c55e;
+    color: white;
+}
+
+.red {
+    background: #ef4444;
+    color: white;
+}
+
+button, .btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}

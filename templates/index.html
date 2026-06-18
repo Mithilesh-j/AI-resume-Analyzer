@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            padding: 14px;
+            font-size: 16px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1e40af;
+        }
+
+        .card {
+            max-width: 700px;
+            margin: 30px auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🤖 AI Resume Analyzer</h1>
+        <p>Upload your resume and compare with Job Description</p>
+    </div>
+
+    <div class="card">
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <!-- RESUME -->
+            <div class="form-group">
+                <label>Upload Resume (PDF)</label>
+                <input type="file" name="resume" required>
+            </div>
+
+            <!-- JOB DESCRIPTION -->
+            <div class="form-group">
+                <label>Job Description</label>
+                <textarea
+                    name="job_description"
+                    placeholder="Paste job description here..."
+                    required></textarea>
+            </div>
+
+            <!-- BUTTON -->
+            <button type="submit" class="btn">Analyze Resume</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
